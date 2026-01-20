@@ -22,7 +22,7 @@ export default function BentoHero() {
                 </h1>
                 <p className="text-slate-300 text-lg max-w-md font-light">
                     Digital Artisan &amp; Frontend Architect crafting immersive web
-                    experiences from Jakarta.
+                    experiences from Bangka Belitung.
                 </p>
             </div>
         </div>

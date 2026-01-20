@@ -14,6 +14,7 @@ export default function BentoTimeLocation() {
                 timeZone: "Asia/Jakarta",
                 hour: "2-digit",
                 minute: "2-digit",
+                second: "2-digit",
             });
             setTime(timeString);
         };
@@ -36,7 +37,7 @@ export default function BentoTimeLocation() {
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                     </span>
                     <span className="text-[10px] font-bold text-green-400 uppercase">
-                        Jakarta
+                        Bangka Belitung
                     </span>
                 </div>
             </div>
