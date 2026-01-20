@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BentoHero from "@/components/about/BentoHero";
 import BentoPhilosophy from "@/components/about/BentoPhilosophy";
+import BentoStory from "@/components/about/BentoStory";
 import BentoTimeLocation from "@/components/about/BentoTimeLocation";
 import BentoStats from "@/components/about/BentoStats";
 import BentoStack from "@/components/about/BentoStack";
@@ -15,6 +16,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[minmax(180px,auto)]">
                         <BentoHero />
                         <BentoPhilosophy />
+                        <BentoStory />
                         <BentoTimeLocation />
                         <BentoStats />
                         <BentoStack />
