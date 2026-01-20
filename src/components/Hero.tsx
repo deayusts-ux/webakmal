@@ -23,9 +23,9 @@ export default function Hero() {
                             </span>
                         </div>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight tracking-tight text-white">
-                            Fusion of Art <br />&amp;{" "}
+                            A Good &amp; Simple <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 italic">
-                                Code
+                                Combination
                             </span>
                         </h1>
                         <p className="text-slate-400 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
