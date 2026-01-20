@@ -1,7 +1,7 @@
 export default function BentoHero() {
     return (
         <div className="glass-panel-dark glow-avatar-card rounded-[32px] col-span-1 md:col-span-2 row-span-2 relative overflow-hidden group min-h-[400px]">
-            <div className="absolute inset-0 bg-[url('/AKMAL%20FAIZ%203x4.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
+            <div className="absolute inset-0 bg-[url('/WhatsApp%20Image%202026-01-19%20at%2012.58.25.jpeg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-90"></div>
             <div className="absolute inset-0 p-8 flex flex-col justify-end z-10">
                 <div className="mb-auto flex justify-between items-start">

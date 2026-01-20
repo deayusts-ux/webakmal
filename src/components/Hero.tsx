@@ -10,7 +10,7 @@ export default function Hero() {
                                 className="w-full h-full bg-cover bg-center"
                                 style={{
                                     backgroundImage:
-                                        'url("/AKMAL%20FAIZ%203x4.jpg")',
+                                        'url("/WhatsApp%20Image%202026-01-19%20at%2012.58.25.jpeg")',
                                 }}
                             ></div>
                         </div>
