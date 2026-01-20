@@ -2,9 +2,17 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
+
+    const isActive = (path: string) => {
+        if (path === "/" && pathname === "/") return true;
+        if (path !== "/" && pathname?.startsWith(path)) return true;
+        return false;
+    };
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 px-4 md:px-0 flex justify-center pt-4">
@@ -20,14 +28,20 @@ export default function Header() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
-                    {["Portfolio", "Services", "About"].map((item) => (
+                    {[
+                        { name: "Portfolio", path: "/" },
+                        { name: "Services", path: "#" },
+                        { name: "About", path: "/about" },
+                    ].map((item) => (
                         <Link
-                            key={item}
-                            href={item === "About" ? "/about" : item === "Portfolio" ? "/" : "#"}
-                            className={`text-sm font-medium transition-colors ${item === "About" ? "text-white" : "text-slate-300 hover:text-white"
+                            key={item.name}
+                            href={item.path}
+                            className={`text-sm font-medium transition-colors ${isActive(item.path) && item.path !== "#"
+                                ? "text-white font-bold"
+                                : "text-slate-300 hover:text-white"
                                 }`}
                         >
-                            {item}
+                            {item.name}
                         </Link>
                     ))}
                 </nav>
@@ -53,14 +67,21 @@ export default function Header() {
                     <div className="absolute top-0 left-0 w-full bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-3xl p-6 flex flex-col gap-6 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200">
                         <div className="h-10"></div> {/* Spacer for header height */}
                         <nav className="flex flex-col gap-4">
-                            {["Portfolio", "Services", "About"].map((item) => (
+                            {[
+                                { name: "Portfolio", path: "/" },
+                                { name: "Services", path: "#" },
+                                { name: "About", path: "/about" },
+                            ].map((item) => (
                                 <Link
-                                    key={item}
-                                    href={item === "About" ? "/about" : item === "Portfolio" ? "/" : "#"}
+                                    key={item.name}
+                                    href={item.path}
                                     onClick={() => setIsMenuOpen(false)}
-                                    className="text-lg font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800/50"
+                                    className={`text-lg font-medium py-2 border-b border-slate-800/50 ${isActive(item.path) && item.path !== "#"
+                                        ? "text-white font-bold"
+                                        : "text-slate-300 hover:text-white"
+                                        }`}
                                 >
-                                    {item}
+                                    {item.name}
                                 </Link>
                             ))}
                         </nav>
@@ -73,3 +94,4 @@ export default function Header() {
         </div>
     );
 }
+
