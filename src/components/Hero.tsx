@@ -19,7 +19,7 @@ export default function Hero() {
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm mb-4">
                             <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
                             <span className="text-xs font-bold tracking-widest uppercase text-slate-300">
-                                Open for Commission
+                                Open For Everyone
                             </span>
                         </div>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight tracking-tight text-white">
