@@ -22,7 +22,7 @@ export default function Hero() {
                                 Open for Commission
                             </span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight tracking-tight text-white">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight tracking-tight text-white">
                             Fusion of Art <br />&amp;{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 italic">
                                 Code
