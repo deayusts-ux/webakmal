@@ -11,9 +11,7 @@ export default function BentoPhilosophy() {
                     Philosophy
                 </h2>
                 <p className="font-serif text-2xl md:text-3xl leading-snug text-slate-200">
-                    "I blend the intricate patterns of{" "}
-                    <span className="italic text-primary">traditional art</span> with the
-                    precision of modern code."
+                    "If they can, why can't we? We don't know the future, so don't think too much about things that can make you stressed."
                 </p>
             </div>
         </div>
