@@ -35,7 +35,7 @@ export default function SocialLinks() {
 
                     {/* TikTok */}
                     <Link
-                        href="#"
+                        href="https://www.tiktok.com/@malcihuy?_r=1&_t=ZS-93EVYSSxUk3"
                         className="group relative w-full h-28 rounded-2xl glass-panel-dark overflow-hidden flex items-center px-6 md:px-8 gap-6"
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
