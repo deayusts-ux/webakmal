@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
     title: "Premium Batik Portfolio - Modern Fusion | Akmal Faiz",
-    description: "Merging traditional aesthetics with modern digital interfaces.",
+    description: "I believe in myself to become a better person and always self-evaluate.",
 };
 
 export default function RootLayout({

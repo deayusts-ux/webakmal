@@ -29,8 +29,7 @@ export default function Hero() {
                             </span>
                         </h1>
                         <p className="text-slate-400 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
-                            Merging traditional aesthetics with modern digital interfaces.
-                            Creating premium web experiences with a touch of cultural heritage.
+                            I believe in myself to become a better person and always self-evaluate.
                         </p>
                     </div>
                     <div className="flex gap-4 pt-4">
