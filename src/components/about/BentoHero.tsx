@@ -21,8 +21,7 @@ export default function BentoHero() {
                     Akmal Faiz
                 </h1>
                 <p className="text-slate-300 text-lg max-w-md font-light">
-                    Digital Artisan &amp; Frontend Architect crafting immersive web
-                    experiences from Bangka Belitung.
+                    Just vocational high school kids can become photographers and have a hobby of exercising.
                 </p>
             </div>
         </div>
