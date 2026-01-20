@@ -8,7 +8,10 @@ export default function BentoStory() {
                 </h2>
                 <div className="prose prose-invert prose-sm max-w-none text-slate-300 font-light leading-relaxed">
                     <p>
-                        Write your story here...
+                        "Halo nama ku Akmal Faiz di Google sih artinya sempurna tapi ya aku tidak merasa begitu. Aku lahir pada 18 Februari 2009 orang sih banyak yang kaget yah karna aku sudah kelas 12 tetapi umur ku masih 16 hehehe. Hobi ku belajar hal baru ntah itu apalah pokonya dan suka bermain basket ataupun game sekalipun. Aku anak bungsu di keluarga ku, kami 4 bersaudara, 3 cowo 1 cewe.
+                    </p>
+                    <p className="mt-4">
+                        Ngomong-ngomong aku adalah anak SMK dan aku juga mengambil jurusan akuntansi, di sekolah aku murid yang biasa biasa saja di bidang akademik tetapi aku sangat mahir di bilang nonakademik dan begitulah cerita singkat ku makasiii udah mau baca kwkwkwk gabut aja ini tengah malem."
                     </p>
                 </div>
             </div>
