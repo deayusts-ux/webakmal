@@ -36,10 +36,6 @@ export default function Hero() {
                         <button className="flex items-center gap-2 bg-primary text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(56,189,248,0.3)]">
                             View Portfolio
                         </button>
-                        <button className="flex items-center gap-2 bg-slate-800/50 text-white border border-slate-700 px-8 py-3 rounded-full font-medium hover:bg-slate-800 transition-all">
-                            <span className="material-symbols-outlined text-sm">download</span>{" "}
-                            CV
-                        </button>
                     </div>
                 </div>
             </div>
