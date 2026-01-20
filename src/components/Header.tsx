@@ -23,7 +23,7 @@ export default function Header() {
                     {["Portfolio", "Services", "About"].map((item) => (
                         <Link
                             key={item}
-                            href={item === "About" ? "/about" : "#"}
+                            href={item === "About" ? "/about" : item === "Portfolio" ? "/" : "#"}
                             className={`text-sm font-medium transition-colors ${item === "About" ? "text-white" : "text-slate-300 hover:text-white"
                                 }`}
                         >
@@ -56,7 +56,7 @@ export default function Header() {
                             {["Portfolio", "Services", "About"].map((item) => (
                                 <Link
                                     key={item}
-                                    href={item === "About" ? "/about" : "#"}
+                                    href={item === "About" ? "/about" : item === "Portfolio" ? "/" : "#"}
                                     onClick={() => setIsMenuOpen(false)}
                                     className="text-lg font-medium text-slate-300 hover:text-white py-2 border-b border-slate-800/50"
                                 >
