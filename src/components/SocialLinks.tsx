@@ -119,7 +119,7 @@ export default function SocialLinks() {
                 </div>
                 {/* Spotify */}
                 <Link
-                    href="#"
+                    href="https://open.spotify.com/user/31glbbkxzzqtvkaeu42bnipdo7ie?si=E7d6jkjhQXKW8U1pAAwgcQ"
                     className="group relative w-full h-28 rounded-2xl glass-panel-dark overflow-hidden flex items-center px-6 md:px-8 gap-6"
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
