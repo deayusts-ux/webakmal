@@ -35,7 +35,6 @@ export default function Header() {
 
     const navItems = [
         { name: "Portfolio", path: "/" },
-        { name: "Moments", path: "/moments" },
         { name: "About", path: "/about" },
     ];
 

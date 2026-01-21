@@ -61,12 +61,7 @@ export default function Moments() {
                     >
                         Portofolio
                     </Link>
-                    <Link
-                        href="#"
-                        className="text-silver-dim hover:text-white font-gallery-display font-light text-xs uppercase tracking-[0.25em] transition-all duration-500 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
-                    >
-                        Moments
-                    </Link>
+
                     <Link
                         href="/about"
                         onClick={playClickSound}
@@ -118,12 +113,7 @@ export default function Moments() {
                             >
                                 Portofolio
                             </Link>
-                            <Link
-                                href="#"
-                                className="text-white font-gallery-display font-medium text-sm uppercase tracking-[0.25em] transition-all"
-                            >
-                                Moments
-                            </Link>
+
                             <Link
                                 href="/about"
                                 onClick={() => { playClickSound(); setIsMenuOpen(false); }}
