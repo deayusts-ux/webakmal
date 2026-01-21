@@ -54,6 +54,7 @@ export default function Moments() {
                 <nav className="hidden md:flex items-center gap-10">
                     <Link
                         href="/"
+                        onClick={playClickSound}
                         className="text-silver-dim hover:text-white font-gallery-display font-light text-xs uppercase tracking-[0.25em] transition-all duration-500 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                     >
                         Portofolio
@@ -66,10 +67,32 @@ export default function Moments() {
                     </Link>
                     <Link
                         href="/about"
+                        onClick={playClickSound}
                         className="text-silver-dim hover:text-white font-gallery-display font-light text-xs uppercase tracking-[0.25em] transition-all duration-500 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                     >
                         About
                     </Link>
+
+                    {/* Music Control in Header */}
+                    <button
+                        onClick={toggleMusic}
+                        className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-4 py-1.5 transition-all group"
+                    >
+                        <div className="relative w-4 h-4 flex items-center justify-center">
+                            {isPlaying ? (
+                                <div className="flex gap-[1px] items-end h-3">
+                                    <div className="w-[2px] bg-white animate-[music-bar_0.8s_ease-in-out_infinite] h-full"></div>
+                                    <div className="w-[2px] bg-white animate-[music-bar_1.2s_ease-in-out_infinite] h-2/3"></div>
+                                    <div className="w-[2px] bg-white animate-[music-bar_1.0s_ease-in-out_infinite] h-full"></div>
+                                </div>
+                            ) : (
+                                <span className="material-symbols-outlined text-lg">play_arrow</span>
+                            )}
+                        </div>
+                        <span className="text-[10px] font-gallery-display font-light uppercase tracking-widest text-white/70 group-hover:text-white transition-colors">
+                            {isPlaying ? "Music On" : "Music Off"}
+                        </span>
+                    </button>
                 </nav>
 
                 {/* Mobile Menu Toggle */}
@@ -88,6 +111,7 @@ export default function Moments() {
                         <nav className="flex flex-col gap-6 items-center">
                             <Link
                                 href="/"
+                                onClick={() => { playClickSound(); setIsMenuOpen(false); }}
                                 className="text-silver-dim hover:text-white font-gallery-display font-light text-sm uppercase tracking-[0.25em] transition-all"
                             >
                                 Portofolio
@@ -100,10 +124,32 @@ export default function Moments() {
                             </Link>
                             <Link
                                 href="/about"
+                                onClick={() => { playClickSound(); setIsMenuOpen(false); }}
                                 className="text-silver-dim hover:text-white font-gallery-display font-light text-sm uppercase tracking-[0.25em] transition-all"
                             >
                                 About
                             </Link>
+
+                            {/* Mobile Music Control */}
+                            <button
+                                onClick={toggleMusic}
+                                className="mt-4 flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-3 transition-all"
+                            >
+                                <div className="relative w-5 h-5 flex items-center justify-center">
+                                    {isPlaying ? (
+                                        <div className="flex gap-[2px] items-end h-4">
+                                            <div className="w-[2.5px] bg-white animate-[music-bar_0.8s_ease-in-out_infinite] h-full"></div>
+                                            <div className="w-[2.5px] bg-white animate-[music-bar_1.2s_ease-in-out_infinite] h-2/3"></div>
+                                            <div className="w-[2.5px] bg-white animate-[music-bar_1.0s_ease-in-out_infinite] h-full"></div>
+                                        </div>
+                                    ) : (
+                                        <span className="material-symbols-outlined text-xl text-white">play_arrow</span>
+                                    )}
+                                </div>
+                                <span className="text-xs font-gallery-display font-light uppercase tracking-[0.2em] text-white">
+                                    {isPlaying ? "Music On" : "Music Off"}
+                                </span>
+                            </button>
                         </nav>
                     </div>
                 )}
@@ -258,33 +304,6 @@ export default function Moments() {
             {/* Audio Elements */}
             <audio ref={audioRef} loop src="/bg-music.mp3" />
             <audio ref={clickSoundRef} src="/click-sound.mp3" />
-
-            {/* Music Control Button */}
-            <button
-                onClick={toggleMusic}
-                className="fixed bottom-8 right-8 z-[100] w-14 h-14 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full flex items-center justify-center text-white shadow-2xl hover:bg-white/10 transition-all duration-300 group"
-                title={isPlaying ? "Pause Music" : "Play Music"}
-            >
-                <div className="relative w-6 h-6 flex items-center justify-center">
-                    {isPlaying ? (
-                        <div className="flex gap-[2px] items-end h-4">
-                            <div className="w-[3px] bg-white animate-[music-bar_0.8s_ease-in-out_infinite] h-full"></div>
-                            <div className="w-[3px] bg-white animate-[music-bar_1.2s_ease-in-out_infinite] h-2/3"></div>
-                            <div className="w-[3px] bg-white animate-[music-bar_1.0s_ease-in-out_infinite] h-full"></div>
-                            <div className="w-[3px] bg-white animate-[music-bar_0.9s_ease-in-out_infinite] h-1/2"></div>
-                        </div>
-                    ) : (
-                        <span className="material-symbols-outlined text-2xl">
-                            play_arrow
-                        </span>
-                    )}
-                </div>
-
-                {/* Visual Feedback pulsing ring when playing */}
-                {isPlaying && (
-                    <div className="absolute inset-0 rounded-full border border-white/20 animate-ping opacity-20 pointer-events-none"></div>
-                )}
-            </button>
 
             <style jsx global>{`
                 @keyframes music-bar {
