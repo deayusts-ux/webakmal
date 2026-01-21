@@ -148,7 +148,7 @@ export default function Moments() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
                                 <div className="absolute bottom-8 left-0 right-0 text-center font-gallery-display font-light tracking-[0.2em] text-white/80 uppercase text-sm">
-                                    Lantern Lights
+                                    RENOVASI
                                 </div>
                             </div>
                         </div>
@@ -156,34 +156,19 @@ export default function Moments() {
                             <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] p-8 md:p-16 rounded-[2rem] text-center">
                                 <div className="inline-block mb-6 px-4 py-1 border border-white/20 rounded-full">
                                     <span className="text-xs font-gallery-display font-medium tracking-[0.3em] uppercase text-white/90">
-                                        Oct 14th — Morocco
+                                        RENOVASI
                                     </span>
                                 </div>
                                 <h2 className="text-3xl md:text-5xl font-gallery-display font-extralight text-white mb-8 tracking-wide leading-tight">
-                                    Shadows of <br />
+                                    Short <br />
                                     <span className="font-normal italic font-serif">
-                                        Marrakech
+                                        Story
                                     </span>
                                 </h2>
                                 <div className="h-px bg-silver-gradient w-[60%] mx-auto my-8"></div>
                                 <div className="font-gallery-sans font-light text-silver-dim space-y-6 leading-relaxed text-lg tracking-wide">
                                     <p>
-                                        Even after sundown, the chaos is
-                                        beautiful. The market transformed under
-                                        the glow of iron lanterns—saffron and
-                                        spices mixing with the cool night air.
-                                    </p>
-                                    <p>
-                                        I wandered through shadows and light,
-                                        getting lost in the labyrinth. Every
-                                        wrong turn led to a new stall shimmering
-                                        with fabrics, vendors&apos; voices lowering
-                                        to a mysterious murmur.
-                                    </p>
-                                    <p>
-                                        It&apos;s darker, more intimate, and
-                                        absolutely magical. The night brings out
-                                        the soul of this place.
+                                        kawan smp yang paling sering kumpul dan paling enak di ajak bercanda banyak ceritanya cuman susah bat yak di ajak kumpul karna beda sekolah semua njir mana ada yang di palembang lagi kalo mau ngumpul ada aja tiba tiba ada yang ga bisa,seru lah pokonya kalo ngumpul ada banyak aja yg mau di cerita.kwkw dah gatau lagi ngetik apa
                                     </p>
                                 </div>
                                 <div className="mt-10 flex justify-center items-center gap-3 text-white/40 group-hover:text-white/80 transition-colors duration-500">
