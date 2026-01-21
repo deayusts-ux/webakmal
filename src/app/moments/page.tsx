@@ -202,7 +202,7 @@ export default function Moments() {
                             <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] p-8 md:p-16 rounded-[2rem] text-center">
                                 <div className="inline-block mb-6 px-4 py-1 border border-white/20 rounded-full">
                                     <span className="text-xs font-gallery-display font-medium tracking-[0.3em] uppercase text-white/90">
-                                        Oct 15th — Austria
+                                        MATRAS BEACH
                                     </span>
                                 </div>
                                 <h2 className="text-3xl md:text-5xl font-gallery-display font-extralight text-white mb-8 tracking-wide leading-tight">
