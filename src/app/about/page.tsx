@@ -6,6 +6,8 @@ import BentoStory from "@/components/about/BentoStory";
 import BentoTimeLocation from "@/components/about/BentoTimeLocation";
 import BentoStats from "@/components/about/BentoStats";
 import BentoStack from "@/components/about/BentoStack";
+import BentoMoments from "@/components/about/BentoMoments";
+
 
 export default function AboutPage() {
     return (
@@ -20,6 +22,8 @@ export default function AboutPage() {
                         <BentoTimeLocation />
                         <BentoStats />
                         <BentoStack />
+                        <BentoMoments />
+
                     </div>
                 </div>
             </main>
