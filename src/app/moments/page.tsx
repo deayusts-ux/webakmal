@@ -119,24 +119,10 @@ export default function Moments() {
                                 <div className="h-px bg-silver-gradient w-[60%] mx-auto my-8"></div>
                                 <div className="font-gallery-sans font-light text-silver-dim space-y-6 leading-relaxed text-lg tracking-wide">
                                     <p>
-                                        The darkness here isn&apos;t empty; it&apos;s full
-                                        of presence. Under the starlight, the
-                                        air felt thin and electric, biting at
-                                        our exposed skin with a crisp, midnight
-                                        chill.
+                                        sekelompok orang orang yang mempunyai nama grub PEJUMIS berasal dari singkatan "Pemuda Jujur dan Manis" yang berisi remaja dari sekolah yang berbeda beda.
                                     </p>
                                     <p>
-                                        There is a specific kind of silence at
-                                        night—heavy, yet weightless. As the fog
-                                        rolled down from the peaks like a ghost,
-                                        it felt like the world was holding its
-                                        breath.
-                                    </p>
-                                    <p>
-                                        I sat on the porch for an hour, watching
-                                        the constellations wheel overhead. A
-                                        solitary golden moment in an endless sea
-                                        of blue.
+                                        foto diambil ketika sedang ngecamp.kilas balik malam kena gigit ages subuh kena hujan badai tidur sambil kaki kena genangan air dan pagi pagi ngopi pas ujan,di lanjutkan mandi cuy main ama gelombang gede mana admin terpental gara 3 gelombang gede sekaligus,sempat terjadi masalah hilang barang sewaan untung  orang nya baik dan masalah ga bawa nasi. dah tu aja dah malas bat ngetik
                                     </p>
                                 </div>
                                 <div className="mt-10 flex justify-center items-center gap-3 text-white/40 group-hover:text-white/80 transition-colors duration-500">
