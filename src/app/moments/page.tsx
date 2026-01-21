@@ -111,9 +111,9 @@ export default function Moments() {
                                     </span>
                                 </div>
                                 <h2 className="text-3xl md:text-5xl font-gallery-display font-extralight text-white mb-8 tracking-wide leading-tight">
-                                    Whispers in <br />
+                                    Short <br />
                                     <span className="font-normal italic font-serif">
-                                        the Alps
+                                        Story
                                     </span>
                                 </h2>
                                 <div className="h-px bg-silver-gradient w-[60%] mx-auto my-8"></div>
