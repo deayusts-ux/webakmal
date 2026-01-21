@@ -8,22 +8,10 @@ import { useState, useRef, useEffect } from "react";
 
 export default function Moments() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef<HTMLAudioElement>(null);
     const clickSoundRef = useRef<HTMLAudioElement>(null);
 
-    const toggleMusic = () => {
-        if (audioRef.current) {
-            if (isPlaying) {
-                audioRef.current.pause();
-            } else {
-                audioRef.current.play().catch(e => console.error("Playback failed:", e));
-            }
-            setIsPlaying(!isPlaying);
-        }
-    };
-
     const playClickSound = () => {
+
         if (clickSoundRef.current) {
             clickSoundRef.current.currentTime = 0;
             clickSoundRef.current.play().catch(e => console.error("Click sound failed:", e));
@@ -73,26 +61,6 @@ export default function Moments() {
                         About
                     </Link>
 
-                    {/* Music Control in Header */}
-                    <button
-                        onClick={toggleMusic}
-                        className="flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-4 py-1.5 transition-all group"
-                    >
-                        <div className="relative w-4 h-4 flex items-center justify-center">
-                            {isPlaying ? (
-                                <div className="flex gap-[1px] items-end h-3">
-                                    <div className="w-[2px] bg-white animate-[music-bar_0.8s_ease-in-out_infinite] h-full"></div>
-                                    <div className="w-[2px] bg-white animate-[music-bar_1.2s_ease-in-out_infinite] h-2/3"></div>
-                                    <div className="w-[2px] bg-white animate-[music-bar_1.0s_ease-in-out_infinite] h-full"></div>
-                                </div>
-                            ) : (
-                                <span className="material-symbols-outlined text-lg">play_arrow</span>
-                            )}
-                        </div>
-                        <span className="text-[10px] font-gallery-display font-light uppercase tracking-widest text-white/70 group-hover:text-white transition-colors">
-                            {isPlaying ? "Music On" : "Music Off"}
-                        </span>
-                    </button>
                 </nav>
 
                 {/* Mobile Menu Toggle */}
@@ -130,26 +98,6 @@ export default function Moments() {
                                 About
                             </Link>
 
-                            {/* Mobile Music Control */}
-                            <button
-                                onClick={toggleMusic}
-                                className="mt-4 flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-3 transition-all"
-                            >
-                                <div className="relative w-5 h-5 flex items-center justify-center">
-                                    {isPlaying ? (
-                                        <div className="flex gap-[2px] items-end h-4">
-                                            <div className="w-[2.5px] bg-white animate-[music-bar_0.8s_ease-in-out_infinite] h-full"></div>
-                                            <div className="w-[2.5px] bg-white animate-[music-bar_1.2s_ease-in-out_infinite] h-2/3"></div>
-                                            <div className="w-[2.5px] bg-white animate-[music-bar_1.0s_ease-in-out_infinite] h-full"></div>
-                                        </div>
-                                    ) : (
-                                        <span className="material-symbols-outlined text-xl text-white">play_arrow</span>
-                                    )}
-                                </div>
-                                <span className="text-xs font-gallery-display font-light uppercase tracking-[0.2em] text-white">
-                                    {isPlaying ? "Music On" : "Music Off"}
-                                </span>
-                            </button>
                         </nav>
                     </div>
                 )}
@@ -302,15 +250,8 @@ export default function Moments() {
             </main>
 
             {/* Audio Elements */}
-            <audio ref={audioRef} loop src="/bg-music.mp3" />
             <audio ref={clickSoundRef} src="/click-sound.mp3" />
 
-            <style jsx global>{`
-                @keyframes music-bar {
-                    0%, 100% { height: 4px; }
-                    50% { height: 16px; }
-                }
-            `}</style>
 
 
             <footer className="relative z-10 w-full py-20 text-center border-t border-white/5 bg-black">
