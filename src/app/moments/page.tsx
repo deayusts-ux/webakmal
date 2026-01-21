@@ -25,7 +25,7 @@ export default function Moments() {
             <header className="relative z-20 w-full px-8 py-10 md:px-24 lg:px-40 flex flex-col md:flex-row items-center justify-between sticky top-0 transition-all duration-300 bg-black/80 backdrop-blur-md border-b border-white/5">
                 <div className="flex items-center gap-4 text-silver mb-4 md:mb-0">
                     <h1 className="text-xl md:text-2xl font-gallery-display font-light tracking-[0.2em] uppercase text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                        Moonlit Gallery
+                        Just My Moment
                     </h1>
                 </div>
                 <nav className="hidden md:flex items-center gap-10">
@@ -95,11 +95,11 @@ export default function Moments() {
                                 <img
                                     alt="Misty mountain landscape with fog rolling over pine trees"
                                     className="w-full h-full object-cover grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuASTV5L6SKrhJs-6M-yk9DvRcErCux6XnZgqStXn0JW1uUZdBsAZArlMWKRwPKc9jqibMBlJoNoUjvomduvUL8LI_xn8IpoH7Nwi6b_4y_R2-V7C8R9I_YQGbp_AEA9En4L1EgJGMJRi_fsW6v0zoHjFBN-MgXxYxAEt9CfnakZi8iRnV75wKeMy5osRS3PFRw3pBr7YnUSLc5lSmotCOo-AUmwsnW2U0fSMBeslNAyZ2xWwr4RngV0NVAQQJ-oudahlsX1g2y5NEo"
+                                    src="/IMG_4977.JPG"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"></div>
                                 <div className="absolute bottom-8 left-0 right-0 text-center font-gallery-display font-light tracking-[0.2em] text-white/80 uppercase text-sm">
-                                    Midnight Peaks
+                                    Pejumis Camp
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ export default function Moments() {
                             <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] p-8 md:p-16 rounded-[2rem] text-center">
                                 <div className="inline-block mb-6 px-4 py-1 border border-white/20 rounded-full">
                                     <span className="text-xs font-gallery-display font-medium tracking-[0.3em] uppercase text-white/90">
-                                        Oct 12th — Switzerland
+                                        RAMBAK BEACH
                                     </span>
                                 </div>
                                 <h2 className="text-3xl md:text-5xl font-gallery-display font-extralight text-white mb-8 tracking-wide leading-tight">
@@ -285,7 +285,7 @@ export default function Moments() {
                         </span>
                     </div>
                     <p className="font-gallery-display font-light tracking-[0.3em] uppercase text-white/40 text-sm">
-                        Minimalist Moonlit Gallery
+                        Minimalist Just My Moment
                     </p>
                     <div className="h-px w-20 bg-silver-gradient"></div>
                     <div className="text-xs font-gallery-sans text-white/20 tracking-widest">
