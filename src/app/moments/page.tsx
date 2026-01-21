@@ -140,11 +140,11 @@ export default function Moments() {
                     {/* Article 2 */}
                     <article className="group relative flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-16 lg:gap-28">
                         <div className="w-full lg:w-1/2 relative transition-all duration-1000 ease-out">
-                            <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
+                            <div className="w-full overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
                                 <img
                                     alt="Bustling outdoor market with colorful spices and people"
-                                    className="w-full h-full object-cover grayscale-[0.5] contrast-125 brightness-75 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnexC938DR2sevhDJNCpLKU7W6hJhfvrfRLYPuCMeIh79OYN9j6frbdwnkx_jVYQbTK9XWp0QRD78Fn7rnHIkXRRw8Cyu2kbSjarQYBqYJ71i51dsrYgojgwHYROvQdB3CExvTEIpgbuhmUadtHeaZ2dCo2FiQCEhFW2GeZi6lRJZG1QNUgCRZSpVc0wvVIHSrajprifNucUg2DLaQncrZbeDyYwkoGJcE532-f61OIpxewcx4bAU0kOiOP2yeaQ2ZEuF2H4wqEVU"
+                                    className="w-full h-auto grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100"
+                                    src="/WhatsApp Image 2026-01-21 at 11.55.53.jpeg"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
                                 <div className="absolute bottom-8 left-0 right-0 text-center font-gallery-display font-light tracking-[0.2em] text-white/80 uppercase text-sm">
