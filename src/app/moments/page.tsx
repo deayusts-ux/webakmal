@@ -3,10 +3,33 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+
 
 export default function Moments() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const audioRef = useRef<HTMLAudioElement>(null);
+    const clickSoundRef = useRef<HTMLAudioElement>(null);
+
+    const toggleMusic = () => {
+        if (audioRef.current) {
+            if (isPlaying) {
+                audioRef.current.pause();
+            } else {
+                audioRef.current.play().catch(e => console.error("Playback failed:", e));
+            }
+            setIsPlaying(!isPlaying);
+        }
+    };
+
+    const playClickSound = () => {
+        if (clickSoundRef.current) {
+            clickSoundRef.current.currentTime = 0;
+            clickSoundRef.current.play().catch(e => console.error("Click sound failed:", e));
+        }
+    };
+
 
     return (
         <div className="min-h-screen w-full relative bg-void text-silver-dim font-gallery-sans selection:bg-white/20 selection:text-white overflow-x-hidden">
@@ -94,8 +117,9 @@ export default function Moments() {
                             <div className="w-full overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
                                 <img
                                     alt="Misty mountain landscape with fog rolling over pine trees"
-                                    className="w-full h-auto grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100"
+                                    className="w-full h-auto grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100 cursor-pointer"
                                     src="/IMG_4977.JPG"
+                                    onClick={playClickSound}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"></div>
                                 <div className="absolute bottom-8 left-0 right-0 text-center font-gallery-display font-light tracking-[0.2em] text-white/80 uppercase text-sm">
@@ -143,8 +167,9 @@ export default function Moments() {
                             <div className="w-full overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
                                 <img
                                     alt="Bustling outdoor market with colorful spices and people"
-                                    className="w-full h-auto grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100"
+                                    className="w-full h-auto grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100 cursor-pointer"
                                     src="/WhatsApp Image 2026-01-21 at 11.55.53.jpeg"
+                                    onClick={playClickSound}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
                                 <div className="absolute bottom-8 left-0 right-0 text-center font-gallery-display font-light tracking-[0.2em] text-white/80 uppercase text-sm">
@@ -189,8 +214,9 @@ export default function Moments() {
                             <div className="w-full overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
                                 <img
                                     alt="Akmal Kecik Photo"
-                                    className="w-full h-auto grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100"
+                                    className="w-full h-auto grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100 cursor-pointer"
                                     src="/WhatsApp Image 2026-01-21 at 13.30.14.jpeg"
+                                    onClick={playClickSound}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-70"></div>
                                 <div className="absolute bottom-8 left-0 right-0 text-center font-gallery-display font-light tracking-[0.2em] text-white/80 uppercase text-sm">
@@ -228,6 +254,45 @@ export default function Moments() {
                     </article>
                 </div>
             </main>
+
+            {/* Audio Elements */}
+            <audio ref={audioRef} loop src="/bg-music.mp3" />
+            <audio ref={clickSoundRef} src="/click-sound.mp3" />
+
+            {/* Music Control Button */}
+            <button
+                onClick={toggleMusic}
+                className="fixed bottom-8 right-8 z-[100] w-14 h-14 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full flex items-center justify-center text-white shadow-2xl hover:bg-white/10 transition-all duration-300 group"
+                title={isPlaying ? "Pause Music" : "Play Music"}
+            >
+                <div className="relative w-6 h-6 flex items-center justify-center">
+                    {isPlaying ? (
+                        <div className="flex gap-[2px] items-end h-4">
+                            <div className="w-[3px] bg-white animate-[music-bar_0.8s_ease-in-out_infinite] h-full"></div>
+                            <div className="w-[3px] bg-white animate-[music-bar_1.2s_ease-in-out_infinite] h-2/3"></div>
+                            <div className="w-[3px] bg-white animate-[music-bar_1.0s_ease-in-out_infinite] h-full"></div>
+                            <div className="w-[3px] bg-white animate-[music-bar_0.9s_ease-in-out_infinite] h-1/2"></div>
+                        </div>
+                    ) : (
+                        <span className="material-symbols-outlined text-2xl">
+                            play_arrow
+                        </span>
+                    )}
+                </div>
+
+                {/* Visual Feedback pulsing ring when playing */}
+                {isPlaying && (
+                    <div className="absolute inset-0 rounded-full border border-white/20 animate-ping opacity-20 pointer-events-none"></div>
+                )}
+            </button>
+
+            <style jsx global>{`
+                @keyframes music-bar {
+                    0%, 100% { height: 4px; }
+                    50% { height: 16px; }
+                }
+            `}</style>
+
 
             <footer className="relative z-10 w-full py-20 text-center border-t border-white/5 bg-black">
                 <div className="flex flex-col items-center gap-6">
