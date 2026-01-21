@@ -32,11 +32,7 @@ export default function Hero() {
                             I believe in myself to become a better person and always self-evaluate.
                         </p>
                     </div>
-                    <div className="flex gap-4 pt-4">
-                        <button className="flex items-center gap-2 bg-primary text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(56,189,248,0.3)]">
-                            View Portfolio
-                        </button>
-                    </div>
+
                 </div>
             </div>
         </div>
