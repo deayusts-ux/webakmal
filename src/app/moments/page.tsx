@@ -3,7 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { useState } from "react";
+
 export default function Moments() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <div className="min-h-screen w-full relative bg-void text-silver-dim font-gallery-sans selection:bg-white/20 selection:text-white overflow-x-hidden">
             {/* Background Gradients */}
@@ -24,18 +28,18 @@ export default function Moments() {
                         Moonlit Gallery
                     </h1>
                 </div>
-                <nav className="flex items-center gap-10">
+                <nav className="hidden md:flex items-center gap-10">
                     <Link
-                        href="#"
+                        href="/"
                         className="text-silver-dim hover:text-white font-gallery-display font-light text-xs uppercase tracking-[0.25em] transition-all duration-500 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                     >
-                        Collection
+                        Portofolio
                     </Link>
                     <Link
                         href="#"
                         className="text-silver-dim hover:text-white font-gallery-display font-light text-xs uppercase tracking-[0.25em] transition-all duration-500 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                     >
-                        Locations
+                        Moments
                     </Link>
                     <Link
                         href="/about"
@@ -44,12 +48,48 @@ export default function Moments() {
                         About
                     </Link>
                 </nav>
+
+                {/* Mobile Menu Toggle */}
+                <button
+                    className="md:hidden relative z-50 text-white p-2"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
+                    <span className="material-symbols-outlined text-2xl">
+                        {isMenuOpen ? "close" : "sort"}
+                    </span>
+                </button>
+
+                {/* Mobile Menu Overlay */}
+                {isMenuOpen && (
+                    <div className="absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 p-6 flex flex-col gap-6 shadow-2xl animate-in fade-in slide-in-from-top-4 duration-200 md:hidden">
+                        <nav className="flex flex-col gap-6 items-center">
+                            <Link
+                                href="/"
+                                className="text-silver-dim hover:text-white font-gallery-display font-light text-sm uppercase tracking-[0.25em] transition-all"
+                            >
+                                Portofolio
+                            </Link>
+                            <Link
+                                href="#"
+                                className="text-white font-gallery-display font-medium text-sm uppercase tracking-[0.25em] transition-all"
+                            >
+                                Moments
+                            </Link>
+                            <Link
+                                href="/about"
+                                className="text-silver-dim hover:text-white font-gallery-display font-light text-sm uppercase tracking-[0.25em] transition-all"
+                            >
+                                About
+                            </Link>
+                        </nav>
+                    </div>
+                )}
             </header>
 
-            <main className="relative z-10 flex-grow px-6 md:px-12 lg:px-24 py-24 flex justify-center w-full overflow-hidden">
-                <div className="max-w-7xl w-full flex flex-col gap-40">
+            <main className="relative z-10 flex-grow px-4 md:px-12 lg:px-24 py-16 md:py-24 flex justify-center w-full overflow-hidden">
+                <div className="max-w-7xl w-full flex flex-col gap-24 md:gap-40">
                     {/* Article 1 */}
-                    <article className="group relative flex flex-col lg:flex-row items-center gap-16 lg:gap-28">
+                    <article className="group relative flex flex-col lg:flex-row items-center gap-8 md:gap-16 lg:gap-28">
                         <div className="w-full lg:w-1/2 relative transition-all duration-1000 ease-out">
                             <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
                                 <img
@@ -64,7 +104,7 @@ export default function Moments() {
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2">
-                            <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] p-12 md:p-16 rounded-[2rem] text-center">
+                            <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] p-8 md:p-16 rounded-[2rem] text-center">
                                 <div className="inline-block mb-6 px-4 py-1 border border-white/20 rounded-full">
                                     <span className="text-xs font-gallery-display font-medium tracking-[0.3em] uppercase text-white/90">
                                         Oct 12th — Switzerland
@@ -112,7 +152,7 @@ export default function Moments() {
                     </article>
 
                     {/* Article 2 */}
-                    <article className="group relative flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-28">
+                    <article className="group relative flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-16 lg:gap-28">
                         <div className="w-full lg:w-1/2 relative transition-all duration-1000 ease-out">
                             <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
                                 <img
@@ -127,7 +167,7 @@ export default function Moments() {
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2">
-                            <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] p-12 md:p-16 rounded-[2rem] text-center">
+                            <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] p-8 md:p-16 rounded-[2rem] text-center">
                                 <div className="inline-block mb-6 px-4 py-1 border border-white/20 rounded-full">
                                     <span className="text-xs font-gallery-display font-medium tracking-[0.3em] uppercase text-white/90">
                                         Oct 14th — Morocco
@@ -173,7 +213,7 @@ export default function Moments() {
                     </article>
 
                     {/* Article 3 */}
-                    <article className="group relative flex flex-col lg:flex-row items-center gap-16 lg:gap-28">
+                    <article className="group relative flex flex-col lg:flex-row items-center gap-8 md:gap-16 lg:gap-28">
                         <div className="w-full lg:w-1/2 relative transition-all duration-1000 ease-out">
                             <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
                                 <img
@@ -188,7 +228,7 @@ export default function Moments() {
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2">
-                            <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] p-12 md:p-16 rounded-[2rem] text-center">
+                            <div className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] p-8 md:p-16 rounded-[2rem] text-center">
                                 <div className="inline-block mb-6 px-4 py-1 border border-white/20 rounded-full">
                                     <span className="text-xs font-gallery-display font-medium tracking-[0.3em] uppercase text-white/90">
                                         Oct 15th — Austria
