@@ -186,15 +186,15 @@ export default function Moments() {
                     {/* Article 3 */}
                     <article className="group relative flex flex-col lg:flex-row items-center gap-8 md:gap-16 lg:gap-28">
                         <div className="w-full lg:w-1/2 relative transition-all duration-1000 ease-out">
-                            <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
+                            <div className="w-full overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
                                 <img
-                                    alt="Quiet interior of an old library with wooden shelves"
-                                    className="w-full h-full object-cover grayscale-[0.8] contrast-150 brightness-90 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-80 hover:opacity-100"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH3rTLMsFgRH5THzbD_waC_o_ZzAXZlrJMqgAGqZbhI_sZBjFC29pgA7PQLmsBHydAYSBveNmXBv0bmrQSk7GkN5OzvXNO_09O0-3XRURN9NpD97OFrjiZRbz5d3tnJX89_zjgq_tV7-_pA5xOfT2ikh4aNRd5GKKgGqqOqh0XXNTrigIhzy2HK2xuDvRhHgLHnq6RegUabyBKGyfETP_sLPFhkgRsdEXmL6WEZ7Y4b_mTOMG63d4GNIZJBfLcDj38Wp1kLuWy4hA"
+                                    alt="Akmal Kecik Photo"
+                                    className="w-full h-auto grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100"
+                                    src="/WhatsApp Image 2026-01-21 at 13.30.14.jpeg"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-70"></div>
                                 <div className="absolute bottom-8 left-0 right-0 text-center font-gallery-display font-light tracking-[0.2em] text-white/80 uppercase text-sm">
-                                    Silent Refuge
+                                    Akmal Kecik
                                 </div>
                             </div>
                         </div>
@@ -206,33 +206,14 @@ export default function Moments() {
                                     </span>
                                 </div>
                                 <h2 className="text-3xl md:text-5xl font-gallery-display font-extralight text-white mb-8 tracking-wide leading-tight">
-                                    Echoes in <br />
+                                    Akmal <br />
                                     <span className="font-normal italic font-serif">
-                                        the Library
+                                        Kecik
                                     </span>
                                 </h2>
                                 <div className="h-px bg-silver-gradient w-[60%] mx-auto my-8"></div>
                                 <div className="font-gallery-sans font-light text-silver-dim space-y-6 leading-relaxed text-lg tracking-wide">
-                                    <p>
-                                        I sought refuge in the dim corners of
-                                        this library as the city slept outside.
-                                        It smells of old paper and beeswax
-                                        polish, illuminated only by a few desk
-                                        lamps.
-                                    </p>
-                                    <p>
-                                        There&apos;s comfort in being surrounded
-                                        by words in the dark. The spines of the
-                                        books create a texture on the wall like
-                                        ancient bricks, dancing in solitary
-                                        beams of light.
-                                    </p>
-                                    <p>
-                                        Sometimes the best part of travel isn&apos;t
-                                        the seeing, but the pausing. Letting the
-                                        quiet of the night catch up with your
-                                        soul.
-                                    </p>
+
                                 </div>
                                 <div className="mt-10 flex justify-center items-center gap-3 text-white/40 group-hover:text-white/80 transition-colors duration-500">
                                     <span className="material-symbols-outlined text-xl font-light">
