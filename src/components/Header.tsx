@@ -1,14 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
+
 import { usePathname } from "next/navigation";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
+    const clickSoundRef = useRef<HTMLAudioElement>(null);
+
+    const playClickSound = () => {
+        if (clickSoundRef.current) {
+            clickSoundRef.current.currentTime = 0;
+            clickSoundRef.current.play().catch(e => console.error("Click sound failed:", e));
+        }
+    };
 
     const isActive = (path: string) => {
+
         return pathname === path;
     };
 
@@ -34,6 +44,9 @@ export default function Header() {
                         <Link
                             key={item.name}
                             href={item.path}
+                            onClick={() => {
+                                playClickSound();
+                            }}
                             className={`text-sm font-medium transition-colors ${isActive(item.path) && item.path !== "#"
                                 ? "text-white font-bold"
                                 : "text-slate-300 hover:text-white"
@@ -49,7 +62,10 @@ export default function Header() {
                 {/* Mobile Hamburger */}
                 <button
                     className="md:hidden relative z-50 text-white p-1"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    onClick={() => {
+                        playClickSound();
+                        setIsMenuOpen(!isMenuOpen);
+                    }}
                 >
                     <span className="material-symbols-outlined text-2xl">
                         {isMenuOpen ? "close" : "menu"}
@@ -69,7 +85,10 @@ export default function Header() {
                                 <Link
                                     key={item.name}
                                     href={item.path}
-                                    onClick={() => setIsMenuOpen(false)}
+                                    onClick={() => {
+                                        playClickSound();
+                                        setIsMenuOpen(false);
+                                    }}
                                     className={`text-lg font-medium py-2 border-b border-slate-800/50 ${isActive(item.path) && item.path !== "#"
                                         ? "text-white font-bold"
                                         : "text-slate-300 hover:text-white"
@@ -83,7 +102,8 @@ export default function Header() {
                     </div>
                 )}
             </header>
-        </div>
+            <audio ref={clickSoundRef} src="/click-sound.mp3" />
+        </div >
     );
 }
 
