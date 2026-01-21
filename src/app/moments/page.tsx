@@ -91,10 +91,10 @@ export default function Moments() {
                     {/* Article 1 */}
                     <article className="group relative flex flex-col lg:flex-row items-center gap-8 md:gap-16 lg:gap-28">
                         <div className="w-full lg:w-1/2 relative transition-all duration-1000 ease-out">
-                            <div className="w-full aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
+                            <div className="w-full overflow-hidden rounded-2xl shadow-[0_35px_60px_-15px_rgba(0,0,0,0.9)] relative group-hover:shadow-[0_40px_80px_-15px_rgba(255,255,255,0.05)] transition-shadow duration-700">
                                 <img
                                     alt="Misty mountain landscape with fog rolling over pine trees"
-                                    className="w-full h-full object-cover grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100"
+                                    className="w-full h-auto grayscale-[0.2] contrast-125 hover:scale-105 transition-transform duration-[1.5s] ease-out opacity-90 hover:opacity-100"
                                     src="/IMG_4977.JPG"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"></div>
