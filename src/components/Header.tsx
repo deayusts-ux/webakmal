@@ -28,7 +28,7 @@ export default function Header() {
                 <nav className="hidden md:flex items-center gap-8">
                     {[
                         { name: "Portfolio", path: "/" },
-                        { name: "Services", path: "#" },
+                        { name: "Moments", path: "/moments" },
                         { name: "About", path: "/about" },
                     ].map((item) => (
                         <Link
@@ -44,11 +44,7 @@ export default function Header() {
                     ))}
                 </nav>
 
-                <div className="hidden md:block">
-                    <button className="bg-white text-slate-900 px-5 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-white transition-all">
-                        Contact
-                    </button>
-                </div>
+
 
                 {/* Mobile Hamburger */}
                 <button
@@ -67,7 +63,7 @@ export default function Header() {
                         <nav className="flex flex-col gap-4">
                             {[
                                 { name: "Portfolio", path: "/" },
-                                { name: "Services", path: "#" },
+                                { name: "Moments", path: "/moments" },
                                 { name: "About", path: "/about" },
                             ].map((item) => (
                                 <Link
@@ -83,9 +79,7 @@ export default function Header() {
                                 </Link>
                             ))}
                         </nav>
-                        <button className="w-full bg-white text-slate-900 px-5 py-3 rounded-xl text-sm font-bold hover:bg-primary hover:text-white transition-all">
-                            Contact Me
-                        </button>
+
                     </div>
                 )}
             </header>

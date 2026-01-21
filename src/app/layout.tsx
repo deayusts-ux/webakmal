@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { Plus_Jakarta_Sans, Playfair_Display, Montserrat, Lato } from "next/font/google";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -14,6 +14,19 @@ const playfair = Playfair_Display({
     display: "swap",
 });
 
+const montserrat = Montserrat({
+    subsets: ["latin"],
+    variable: "--font-montserrat",
+    display: "swap",
+});
+
+const lato = Lato({
+    subsets: ["latin"],
+    weight: ["100", "300", "400", "700", "900"],
+    variable: "--font-lato",
+    display: "swap",
+});
+
 export const metadata: Metadata = {
     title: "Premium Batik Portfolio - Modern Fusion | Akmal Faiz",
     description: "I believe in myself to become a better person and always self-evaluate.",
@@ -25,7 +38,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={`${jakarta.variable} ${playfair.variable} dark`}>
+        <html lang="en" className={`${jakarta.variable} ${playfair.variable} ${montserrat.variable} ${lato.variable} dark`}>
             <head>
                 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
             </head>
